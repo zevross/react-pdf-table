@@ -2,14 +2,17 @@ import * as React from "react";
 import { TableBorder } from "./TableCell";
 import { TableBodyProps } from "./TableBody";
 export interface TableRowProps extends TableBorder {
-    fontSize?: number | string;
-    textAlign?: "left" | "center" | "right";
-    data?: any;
-    zebra?: boolean;
-    even?: boolean;
-    evenRowColor?: string;
-    oddRowColor?: string;
+  fontSize?: number | string;
+  textAlign?: "left" | "center" | "right";
+  data?: any;
+  zebra?: boolean;
+  even?: boolean;
+  evenRowColor?: string;
+  oddRowColor?: string;
+  children?: React.ReactNode;
 }
-export declare class TableRow extends React.PureComponent<Partial<TableBodyProps>> {
-    render(): JSX.Element;
+export declare class TableRow extends React.PureComponent<
+  Partial<TableBodyProps>
+> {
+  render(): JSX.Element;
 }

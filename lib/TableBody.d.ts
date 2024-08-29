@@ -1,10 +1,13 @@
 import { TableRowProps } from "./TableRow";
 import * as React from "react";
 import { ZebraProps } from "./Table";
-export interface TableBodyProps extends TableRowProps, Pick<ZebraProps, "zebra"> {
-    data?: any[];
-    renderTopBorder?: boolean;
+export interface TableBodyProps
+  extends TableRowProps,
+    Pick<ZebraProps, "zebra"> {
+  data?: any[];
+  renderTopBorder?: boolean;
+  children?: React.ReactNode;
 }
 export declare class TableBody extends React.PureComponent<TableBodyProps> {
-    render(): JSX.Element[];
+  render(): JSX.Element[];
 }

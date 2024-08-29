@@ -1,18 +1,19 @@
 import * as React from "react";
 import ReactPDF from "@react-pdf/renderer";
 export interface TableBorder {
-    includeTopBorder?: boolean;
-    includeRightBorder?: boolean;
-    includeBottomBorder?: boolean;
-    includeLeftBorder?: boolean;
+  includeTopBorder?: boolean;
+  includeRightBorder?: boolean;
+  includeBottomBorder?: boolean;
+  includeLeftBorder?: boolean;
 }
 export interface TableCellProps extends TableBorder {
-    weighting?: number;
-    style?: ReactPDF.Style | ReactPDF.Style[];
-    textAlign?: "left" | "center" | "right";
-    isHeader?: boolean;
-    fontSize?: number | string;
+  weighting?: number;
+  style?: ReactPDF.Style | ReactPDF.Style[];
+  textAlign?: "left" | "center" | "right";
+  isHeader?: boolean;
+  fontSize?: number | string;
+  children?: React.ReactNode;
 }
 export declare class TableCell extends React.PureComponent<TableCellProps> {
-    render(): JSX.Element;
+  render(): JSX.Element;
 }
